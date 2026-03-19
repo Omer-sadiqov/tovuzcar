@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TovuzCar - Tovuzdan Keyfiyyətli Avtomobillər</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2/css/lightgallery-bundle.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        :root { --primary-blue: #0A66C2; }
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .car-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .car-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(10 102 194 / 0.1); }
+        .header-bg { background: linear-gradient(135deg, #0A66C2 0%, #1E40AF 100%); }
+        .hero-bg { background: linear-gradient(rgba(10, 102, 194, 0.85), rgba(30, 64, 175, 0.85)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat; }
+        .price-tag { background: linear-gradient(90deg, #0A66C2, #1E40AF); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="header-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.location.reload()">
+                <img src="loqo.jpg" alt="Logo" class="h-12 w-auto rounded-lg shadow-md" onerror="this.src='https://via.placeholder.com/180x60/0A66C2/FFFFFF?text=TOVUZCAR'">
+                <div>
+                    <span class="text-3xl font-bold tracking-tight">TOVUZCAR</span>
+                    <span class="block text-xs font-medium tracking-widest opacity-75 -mt-1">AVTOMOBİL SATIŞI</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#avtomobiller" class="hover:text-blue-200 transition">Avtomobillər</a>
+                <a href="#xidmetler" class="hover:text-blue-200 transition">Xidmətlərimiz</a>
+                <a href="#haqqimizda" class="hover:text-blue-200 transition">Haqqımızda</a>
+                <a href="#elaqe" class="hover:text-blue-200 transition">Əlaqə</a>
+            </nav>
+            <div class="flex gap-3">
+                <a href="https://wa.me/994513012112" target="_blank" class="bg-white text-[#0A66C2] px-4 py-2 rounded-xl font-bold text-sm hover:bg-blue-50 transition"><i class="fab fa-whatsapp"></i> Ömər</a>
+                <a href="https://wa.me/994515510313" target="_blank" class="bg-white text-[#0A66C2] px-4 py-2 rounded-xl font-bold text-sm hover:bg-blue-50 transition"><i class="fab fa-whatsapp"></i> Arif</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-bg text-white py-24 text-center">
+        <div class="max-w-5xl mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Tovuzdan <span class="text-yellow-300">keyfiyyətli</span> avtomobillər</h1>
+            <p class="text-xl md:text-2xl mb-10 opacity-90">4 ildir yalnız nağd satış • Tovuz rayonu, Bozalqanlı kəndi</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#avtomobiller" class="bg-white text-[#0A66C2] font-bold text-lg px-10 py-4 rounded-2xl hover:scale-105 transition">AVTOMOBİLLƏRƏ BAX</a>
+                <a href="https://maps.app.goo.gl/nBeYWjEfUxzGUHWV8" target="_blank" class="border-2 border-white font-bold text-lg px-8 py-4 rounded-2xl hover:bg-white hover:text-[#0A66C2] transition">XƏRİTƏDƏ GÖR</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="avtomobiller" class="max-w-7xl mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-10">Bütün avtomobillərimiz</h2>
+        <div id="cars-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"> 
+             <!-- AVTOMOBİLLƏR(1) -->
+             <div class="car-card bg-white rounded-3xl overflow-hidden shadow-md">
+                <div class="relative group cursor-pointer" onclick="openCarGallery('gallery-K7')">
+                    <img src="Kia K7 panarama/1.jpg" alt="Kia K7" class="w-full h-56 object-cover">
+                    <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs px-3 py-1 rounded-lg flex items-center gap-2">
+                        <i class="fas fa-camera"></i> 20+ <i class="fas fa-play-circle ml-1"></i> Video
+                    </div>
+                    <div class="price-tag absolute top-4 right-4 text-white text-sm font-bold px-5 py-2 rounded-2xl shadow z-10">32 500 ₼</div>
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-white font-bold border-2 border-white px-4 py-2 rounded-xl">Şəkillərə bax</span>
+                    </div>
+                </div>
+                
+                <div id="gallery-K7" style="display:none;">
+                    <a href="Kia K7 panarama/1.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/1.jpg"></a>
+                    <a href="Kia K7 panarama/2.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/2.jpg"></a>
+                    <a href="Kia K7 panarama/3.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/3.jpg"></a>
+                    <a href="Kia K7 panarama/4.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/4.jpg"></a>
+                    <a href="Kia K7 panarama/5.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/5.jpg"></a>
+                    <a href="Kia K7 panarama/6.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/6.jpg"></a>
+                    <a href="Kia K7 panarama/7.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/7.jpg"></a>
+                    <a href="Kia K7 panarama/8.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/8.jpg"></a>
+                    <a href="Kia K7 panarama/9.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/9.jpg"></a>
+                    <a href="Kia K7 panarama/10.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/10.jpg"></a>
+                    <a href="Kia K7 panarama/11.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/11.jpg"></a>
+                    <a href="Kia K7 panarama/12.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/12.jpg"></a>
+                    <a href="Kia K7 panarama/13.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/13.jpg"></a>
+                    <a href="Kia K7 panarama/14.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/14.jpg"></a>
+                    <a href="Kia K7 panarama/15.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/15.jpg"></a>
+                    <a href="Kia K7 panarama/16.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/16.jpg"></a>
+                    <a href="Kia K7 panarama/17.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/17.jpg"></a>
+                    <a href="Kia K7 panarama/18.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/18.jpg"></a>
+                    <a href="Kia K7 panarama/19.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/19.jpg"></a>
+                    <a href="Kia K7 panarama/20.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/20.jpg"></a>
+                    <a href="Kia K7 panarama/21.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/21.jpg"></a>
+                    <a href="Kia K7 panarama/22.jpg" data-sub-html="<h4>Kia K7 2016</h4>"><img src="Kia K7 panarama/22.jpg"></a>
+                
+                </div>
+
+                 <div class="mt-4">
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')"
+                                class="w-full text-left bg-gray-100 hover:bg-gray-200 px-4 py-3 rounded-lg font-medium flex justify-between items-center transition-all">
+                            <span>Ətraflı məlumat (VIN, xüsusiyyətlər və s.)</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+
+                        <div class="hidden mt-3 text-sm text-gray-700 space-y-2 border-t pt-3">
+                            <p><strong>  Mühərrik:</strong> 2.2L CRDi dizel</p>
+                            <p><strong>  Ötürücü:</strong> Avtomat karofqa</p>
+                            <p><strong>  Salon:</strong> Full karişni rəng dəri salon, oturacaqların istilməsi + soyudulması, elektron oturacaqların tənzinlənməsi</p>
+                            <p><strong>  Multimédia:</strong> 8" toxunmat ekran, Android Auto & Apple CarPlay</p>
+                            <p><strong>  Təhlükəsizlik:</strong>  parking sensor, adaptiv kruiz</p>
+                            <p><strong>  Əlavə:</strong>Full Panoramik tavan, açarsız giriş , yağış sensoru</p>
+                            <p><strong>Funksialar:</strong>1)elektron güzgülər,otracaq yaddaş paketi 2)baqajın knofqa vasitəsi ilə açılması 3)knofqa vasitəsi ilə arxa pərdənin açılıb,bağlanması 4)arxa oturacaqdan multimedianın idarə edilməsi 6)elektron rolun tənzinlənməsi 7)parking sensor 8)ruçnoy əldə(knofqa) 9)sol, sağ oturacaqların elekton tənzinlənməsi + sağ oturacağın yandan knofqa ilə tənzinlənməsi 10) 3 ədəd 12V 180W giriş, usb və Jack giriş </p>
+                            <p><strong>  Vəziyyəti:</strong> Avtomobil tam Qəzasız və boyasızdır . Avtomobilin bütün funksiaları işləyir. </p>
+                        </div>
+                    </div>
+
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Kia K7 2016</h3>
+                    <p class="text-sm text-gray-500 mt-2">199 000+ km • 2.2L Dizel</p>
+                    <button onclick="window.open('https://wa.me/994513012112')" class="mt-6 w-full bg-[#0A66C2] text-white py-4 rounded-2xl font-medium flex items-center justify-center gap-2 hover:bg-blue-700">
+                        <i class="fab fa-whatsapp"></i> WhatsApp ilə əlaqə
+                    </button>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <section id="xidmetler" class="bg-[#0A66C2] text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="bg-white/20 text-white text-sm px-6 py-2 rounded-full">🚀 Xidmətlərimiz</span>
+                <h2 class="text-4xl font-bold mt-4">Biz nə təklif edirik?</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8">
+                    <div class="text-5xl mb-6">💰</div>
+                    <h3 class="text-2xl font-semibold mb-3">Yalnız nağd satış</h3>
+                    <p class="opacity-90">Avtomobil alışı zamanı yalnız nağd ödəniş qəbul edilir.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8">
+                    <div class="text-5xl mb-6">📋</div>
+                    <h3 class="text-2xl font-semibold mb-3">Sığorta qeydiyyatı</h3>
+                    <p class="opacity-90">Sığorta prosesində tam yardım göstəririk.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8">
+                    <div class="text-5xl mb-6">🏛️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Dövlət qeydiyyatı</h3>
+                    <p class="opacity-90">Texpasport qeydiyyatına tam yardım edirik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="haqqimizda" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">4 ildir avtomobil satışıyla məşğuluq</h2>
+                <div class="space-y-6 text-lg">
+                    <p class="flex gap-4"><span>👨‍👦</span> <span>Mən <strong>Ömər Sadıqov</strong> və atam <strong>Arif (Qoçu)</strong> birlikdə işləyirik.</span></p>
+                    <p class="flex gap-4"><span>📍</span> <span>Universitetdə oxuduğum üçün müştəriləri yalnız atam qarşılaya bilir.</span></p>
+                    <p class="flex gap-4"><span>🏡</span>  <span>Bütün avtomobillər evimizdədir. Satış məntəqəsi yoxdur. Adres: <a href="https://maps.app.goo.gl/nBeYWjEfUxzGUHWV8" target="_blank" class="underline text-[#0A66C2]">Tovuz rayonu, Bozalqanlı kəndi</a></span></p>
+                    </a></span>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-lg text-center">
+                <img src="https://picsum.photos/id/1005/600/400" alt="TovuzCar" class="rounded-3xl w-full shadow mb-6">
+                <p class="text-gray-600">TovuzCar ailəsi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="elaqe" class="bg-gray-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Bizimlə əlaqə saxlayın</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-2xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Ömər Sadıqov</div>
+                                <a href="tel:+994513012112" class="text-3xl font-bold">+994 51 301 21 12</a>
+                                <div class="text-blue-300 text-sm mt-1">WhatsApp / Zəng</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-2xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Arif (Qoçu) – Atam</div>
+                                <a href="tel:+994515510313" class="text-3xl font-bold">+994 51 551 03 13</a>
+                                <div class="text-blue-300 text-sm mt-1">Müştəriləri qarşılayır</div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="mailto:tovuzcar@gmail.com" class="flex items-center gap-4 hover:text-blue-300 transition">
+                                <i class="fas fa-envelope text-4xl"></i>
+                                <div>
+                                    <div class="font-medium">E-poçt</div>
+                                    <div class="text-2xl">tovuzcar@gmail.com</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+           <div class="bg-white/10 rounded-3xl p-8">
+                    <div class="text-center mb-8">
+                        <div class="inline-flex gap-8 text-4xl">
+                            <a href="https://instagram.com/tovuzcar" target="_blank" class="hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com/tovuzcar" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.tiktok.com/@tovuz.car" target="_blank" class="hover:text-[#ee1d52] transition"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <a href="https://maps.app.goo.gl/nBeYWjEfUxzGUHWV8" target="_blank" class="block bg-white text-gray-900 rounded-3xl p-8 text-center hover:scale-105 transition">
+                        <i class="fas fa-map-marker-alt text-5xl mb-4 text-[#0A66C2]"></i>
+                        <div class="font-bold text-xl">Bozalqanlı kəndi</div>
+                        <div class="text-sm opacity-75">Tovuz rayonu • Xəritə</div>
+                    </a>
+                     <div class="mt-8 text-center text-xs opacity-95">
+                        Bütün avtomobillər evimizdədir. Əvvəlcədən zəng edin.
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-400 py-12 text-center">
+        <div class="mb-4 text-white text-2xl font-bold">TOVUZCAR</div>
+        <p>© 2026 TovuzCar • Ömər Sadıqov və Arif Sadıqov</p>
+        <p class="text-xs mt-2">Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/plugins/video/lg-video.min.js"></script>
+
+    <script>
+        function openCarGallery(galleryId) {
+            const container = document.getElementById(galleryId);
+            if (container.classList.contains('lg-initialized')) {
+                window[galleryId + '_instance'].openGallery(0);
+                return;
+            }
+            const lgInstance = lightGallery(container, {
+                selector: 'a',
+                plugins: [lgThumbnail, lgZoom, lgVideo],
+                speed: 500,
+                thumbnail: true,
+                download: false,
+                counter: true
+            });
+            window[galleryId + '_instance'] = lgInstance;
+            container.classList.add('lg-initialized');
+            lgInstance.openGallery(0);
+        }
+    </script>
+</body>
+</html
